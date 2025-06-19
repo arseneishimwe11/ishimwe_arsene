@@ -1,14 +1,15 @@
 {
   "name": "express-docker-nginx",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Simple Express.js app with Docker and NGINX",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.1.0"
   }
