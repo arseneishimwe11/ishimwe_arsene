@@ -152,11 +152,6 @@ curl http://localhost/nginx-health
 # Test with headers
 curl -H "Accept: application/json" http://localhost/health
 
-# Test response time
-curl -w "@curl-format.txt" -o /dev/null -s http://localhost
-
-# Load testing (if you have ab installed)
-ab -n 1000 -c 10 http://localhost/
 ```
 
 ### Expected Responses
@@ -263,13 +258,6 @@ docker-compose up -d --scale express-app=3
    ```bash
    npm test
    ```
-
-### Adding New Features
-
-1. Modify `app.js` for new endpoints
-2. Update `package.json` if new dependencies are needed
-3. Rebuild Docker image: `docker-compose build`
-4. Test changes: `docker-compose up -d`
 
 ## 🐛 Troubleshooting
 
